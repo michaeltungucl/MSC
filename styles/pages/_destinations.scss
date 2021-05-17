@@ -1,0 +1,43 @@
+.destinations {
+    width: 100vw;
+    margin: auto;
+    img {
+        width: 100%;
+    }
+}
+.destinations__bestlocations {
+    width: 100vw;
+    margin: auto;
+}
+.destinations__locations{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    @include media (">=tablet") {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        padding: 0 4em;
+    }
+}
+.destinations__bests {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    margin: auto;
+    img {
+        width: 100%;
+    }
+    @include media (">=tablet") {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        padding: 0 4em;
+    }
+}
+hr {
+    border: none;
+    height: 2px;
+    width: 120px;
+    background-color: var(--color-orange);	
+}

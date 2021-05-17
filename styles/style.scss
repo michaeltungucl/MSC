@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@import "../node_modules/include-media/dist/include-media";
+
+@import './utils/variables';
+@import './utils/mixins';
+
+@import './components/headings';
+
+@import './core/typography';
+
+@import './pages/navigation';
+@import './pages/destinations';
+@import './pages/footer';
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-size: 1.6rem;
+}
+html {
+    font-size: 16px;
+}
