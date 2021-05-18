@@ -33,14 +33,14 @@ const footerLinkToggle = () => {
     const institutionalInfo = document.querySelector('.footer__institutionalInfo');
     const arrow = document.querySelector('.plus');
 
-    link1.addEventListener('click', () => {
+    link1.addEventListener('click', (e) => {
         institutionalInfo.classList.toggle('footer__info--active');
 
         const img1 = "http://127.0.0.1:5500/images/minus.svg";
         const img2 = "http://127.0.0.1:5500/images/add.svg";
 
         arrow.src = (arrow.src === img1) ? img2 : img1;
-        console.log(arrow.src)
+        console.log(arrow.src);
     })
 }
 
