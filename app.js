@@ -5,10 +5,15 @@ const burgerToggle = () => {
     burger.addEventListener('click', () => {
         nav.classList.toggle('nav--active');
 
-        const img1 = "http://127.0.0.1:5500/images/hamburger.svg";
-        const img2 = "http://127.0.0.1:5500/images/cross.svg";
+        const img1 = "./images/hamburger.svg";
+        const img2 = "./images/cross.svg";
+        
+        if (nav.classList.contains('nav--active')) {
+            burger.src = img2;
+        } else {
+            burger.src = img1;
+        }
 
-        burger.src = (burger.src === img1) ? img2 : img1;
     });
 }
 
@@ -20,30 +25,23 @@ const burgerLinkToggle = () => {
     link.addEventListener('click', () => {
         onBoard.classList.toggle('nav__onboard--active');
 
-        const img1 = "http://127.0.0.1:5500/images/arrow-down.svg";
-        const img2 = "http://127.0.0.1:5500/images/arrow-up.svg";
+        const img1 = "./images/arrow-down.svg";
+        const img2 = "./images/arrow-up.svg";
 
-        arrow.src = (arrow.src === img1) ? img2 : img1;
-        console.log(arrow.src)
+        if (onBoard.classList.contains('nav__onboard--active')) {
+            arrow.src = img2;
+        } else {
+            arrow.src = img1;
+        }
     })
 }
 
-const footerLinkToggle = () => {
-    const link1 = document.querySelector('.footer__title--link');
-    const institutionalInfo = document.querySelector('.footer__institutionalInfo');
-    const arrow = document.querySelector('.plus');
-
-    link1.addEventListener('click', (e) => {
-        institutionalInfo.classList.toggle('footer__info--active');
-
-        const img1 = "http://127.0.0.1:5500/images/minus.svg";
-        const img2 = "http://127.0.0.1:5500/images/add.svg";
-
-        arrow.src = (arrow.src === img1) ? img2 : img1;
-        console.log(arrow.src);
+const accordionItemHeaders = document.querySelectorAll('.footer__accordion-header');
+accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener('click', (e) => {
+        accordionItemHeader.classList.toggle('active');
     })
-}
+})
 
 burgerLinkToggle();
 burgerToggle();
-footerLinkToggle();
