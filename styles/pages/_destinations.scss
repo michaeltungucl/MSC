@@ -5,7 +5,7 @@
     }
     h1 {
         font-weight: 400;
-        font-size: 4rem;
+        font-size: 2rem;
     }
 }
 .destinations__bestlocations {
@@ -13,14 +13,45 @@
     margin-bottom: 8rem;
     h1 {
         font-weight: 400;
-        font-size: 4rem;
+        font-size: 2rem;
     }
 }
 .destinations__locations {
     @include grid-destinations();
+    a {
+        display: block;
+    }
+}
+.destinations__location {
+    background-image: url("./../images/lisbon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 24rem;
+    position: relative;
+    h2 {
+        color: white;
+        font-size: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 2rem;
+    }
 }
 .destinations__bests {
     @include grid-cruises();
+}
+.destinations__best {
+    background-image: url("./../images/cruise.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 34rem;
+    position: relative;
+    h2 {
+        color: white;
+        font-size: 2rem;
+        position: absolute;
+        bottom: 0;
+        left: 2rem;
+    }
 }
 hr {
     border: none;
