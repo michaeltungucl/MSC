@@ -40,6 +40,11 @@ a {
           justify-content: center;
 }
 
+figure {
+  display: block;
+  margin: 0;
+}
+
 :root {
   --color-blue:  rgb(1, -0, 54);
   --color-orange: rgb(255, 93, 0);
@@ -413,7 +418,7 @@ h1 {
 }
 
 .destinations {
-  margin-top: 8rem;
+  margin-top: 8.8rem;
 }
 
 .destinations img {
